@@ -1,0 +1,1 @@
+Code of a mobile development project
