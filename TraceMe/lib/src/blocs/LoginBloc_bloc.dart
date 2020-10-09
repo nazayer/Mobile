@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:developer' as developer;
-
 import 'package:TraceMe/src/mixins/ValidationMixin.dart';
 
 class LoginBloc with ValidationMixin {
