@@ -1,8 +1,45 @@
 import 'package:flutter/material.dart';
+import 'src/App.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(App());
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -30,6 +67,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
