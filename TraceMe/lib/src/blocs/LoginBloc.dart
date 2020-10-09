@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:developer' as developer;
 import 'package:TraceMe/src/mixins/ValidationMixin.dart';
 
 class LoginBloc with ValidationMixin {
@@ -11,6 +10,13 @@ class LoginBloc with ValidationMixin {
   Function(String) get changePassword => _passwordController.sink.add;
 
   // retrieve data from stream thsi is a function that returns a stream of type string
-  Stream<String> get emailStream => _emailController.stream;
-  Stream<String> get passwordStream => _passwordController.stream;
+  Stream<String> get emailStream =>
+      _emailController.stream.transform(validateEmail);
+  Stream<String> get passwordStream =>
+      _passwordController.stream.transform(validatePassword);
+
+  despose() {
+    _emailController.close();
+    _passwordController.close();
+  }
 }
