@@ -1,6 +1,5 @@
 import 'package:TraceMe/src/mixins/ValidationMixin.dart';
 import 'package:flutter/material.dart';
-import '../mixins/ValidationMixin.dart';
 import '../blocs/LoginBloc_bloc.dart';
 
 final loginBloc = new LoginBloc();
