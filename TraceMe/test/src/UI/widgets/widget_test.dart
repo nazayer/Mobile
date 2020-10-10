@@ -5,7 +5,8 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-//Each class will have its own className_test.dart file
+//Each class will have its own className_test.dart file. this will be nessesary to run the file
+// import the package of the class you want to test
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
