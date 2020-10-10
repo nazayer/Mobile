@@ -1,4 +1,5 @@
-import 'package:TraceMe/src/UI/screens/LoginScreen.dart';
+import 'package:TraceMe/src/UI/screens/login_screen.dart';
+import 'package:TraceMe/src/UI/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'blocs/LoginProvider.dart';
 
@@ -8,11 +9,15 @@ class App extends StatelessWidget {
     return LoginProvider(
       child: MaterialApp(
         title: 'TraceMe',
-        home: Scaffold(
-            //appBar: AppBar(
-            //  title: Text("TraceMe dashboard"),
-            //),
-            body: LoginScreen()),
+        initialRoute: '/',
+        routes: {
+          '/': (context) => LoginScreen(),
+          '/main': (context) => HomeScreen(),
+          '/register': (context) => LoginScreen(),
+          '/forgotPassword': (context) => LoginScreen(),
+          '/notifications': (context) => LoginScreen(),
+          '/profile': (context) => LoginScreen()
+        },
       ),
     );
   }

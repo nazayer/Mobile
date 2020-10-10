@@ -6,18 +6,25 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final loginBloc = LoginProvider.of(context);
-    return Container(
-      margin: EdgeInsets.all(20.0),
-      child: Column(
-        children: [
-          //Add header and logo here
-          Container(margin: EdgeInsets.only(top: 25.0)),
-          emailField(loginBloc),
-          Container(margin: EdgeInsets.only(top: 25.0)),
-          passwordField(loginBloc),
-          Container(margin: EdgeInsets.only(top: 25.0)),
-          submitButton(loginBloc),
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.amber,
+        title: Text("TraceMe Login"),
+      ),
+      body: Container(
+        margin: EdgeInsets.all(20.0),
+        child: Column(
+          children: [
+            //Add header and logo here
+            Container(margin: EdgeInsets.only(top: 25.0)),
+            emailField(loginBloc),
+            Container(margin: EdgeInsets.only(top: 25.0)),
+            passwordField(loginBloc),
+            Container(margin: EdgeInsets.only(top: 25.0)),
+            submitButton(loginBloc),
+          ],
+        ),
       ),
     );
   }
