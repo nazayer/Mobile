@@ -1,4 +1,4 @@
-import 'package:TraceMe/src/screens/LoginScreen.dart';
+import 'package:TraceMe/src/UI/screens/LoginScreen.dart';
 import 'package:flutter/material.dart';
 import 'blocs/LoginProvider.dart';
 
